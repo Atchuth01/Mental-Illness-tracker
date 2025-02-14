@@ -98,9 +98,6 @@ X_lstm = pad_sequences(X_lstm, maxlen=max_sequence_length, dtype='float32', padd
 # Ensure X_lstm is (samples, timesteps, features)
 X_lstm = np.array(X_lstm)  # Convert list to NumPy array
 
-# Check shape (should be: (num_samples, max_sequence_length, 100))
-print(f"✅ Fixed X_lstm shape: {X_lstm.shape}")
-
 # Split LSTM dataset
 X_train_lstm, X_test_lstm, y_train_lstm, y_test_lstm = train_test_split(X_lstm, y_text, test_size=0.2, random_state=42)
 
