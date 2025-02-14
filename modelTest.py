@@ -87,7 +87,7 @@ def predict_impact(age, gender, social_media_freq, self_reported_status):
     impact_score = impact_model.predict(input_scaled)[0]
     return round(impact_score, 2)
 
-# Test cases for sentiment classification
+# Test cases for sentiment classification (Scocial media posts)
 test_sentences = [
     "I feel empty, unmotivated, and nothing excites me anymore.",  
     "I don't see a way out of this pain. I'm done with everything.",  
