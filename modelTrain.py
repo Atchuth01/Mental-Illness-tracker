@@ -2,6 +2,7 @@
 #AI-Driven Mental Health Analysis from Social Media
 #Model Training
 
+
 import pandas as pd
 import numpy as np
 import re
@@ -28,7 +29,7 @@ nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('wordnet')
 
-# Load balanced dataset
+# Load datasets
 df_text = pd.read_csv("datasets/socialMedia_mentalHealth.csv")
 df_behavior = pd.read_csv("datasets/mentalHealth_Behavior.csv")
 
@@ -39,7 +40,7 @@ df_text['sentiment_label'] = label_encoder.fit_transform(df_text['label'])
 # Save label encoder
 joblib.dump(label_encoder, "models/sentiment_label_encoder.pkl")
 
-# Text Cleaning Function (keeping negations)
+# Text Cleaning Function 
 def clean_text(text):
     text = text.lower()
     text = re.sub(r'[^a-z\s]', '', text)  # Remove special characters
@@ -47,7 +48,7 @@ def clean_text(text):
     tokens = [word for word in tokens if word not in stopwords.words('english') or word in ["not", "never", "no"]]
     lemmatizer = WordNetLemmatizer()
     tokens = [lemmatizer.lemmatize(word) for word in tokens]
-    return tokens  # Return list instead of string for Word2Vec
+    return tokens  
 
 # Apply preprocessing
 print("Starting text preprocessing...")
@@ -144,4 +145,4 @@ impact_model.fit(X_train_behavior, y_train_behavior)
 joblib.dump(impact_model, "models/impact_model.pkl")
 joblib.dump(scaler, "models/scaler.pkl")
 
-print("✅ Impact prediction model trained successfully!")
+print("Impact prediction model trained successfully!")
