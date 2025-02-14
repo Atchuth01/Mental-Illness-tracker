@@ -1,11 +1,11 @@
 # Mental-Illness-tracker
 AI-Driven Mental Health Analysis from Social Media
 
-##Project Overview
+## Project Overview
 
 This project aims to leverage AI and machine learning techniques to analyze social media posts and behavioral patterns for early detection and monitoring of mental health conditions. By assessing user sentiment and self-reported mental health data, the system provides insights into the impact of social media on mental well-being.
 
-##Dataset
+## Dataset
 
 The project utilizes two datasets:
 
@@ -13,7 +13,7 @@ mentalHealth(socialMedia).csv: Contains user-generated content with labeled ment
 
 mentalHealthBehaviour.csv: Includes respondent demographics, social media interaction frequency, self-reported mental health status, and impact scores.
 
-##Key Features
+## Key Features
 
 Sentiment Classification: Detects distress levels from textual social media posts.
 
