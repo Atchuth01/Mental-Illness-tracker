@@ -1,3 +1,5 @@
+##Mental-Illness-tracker
+#AI-Driven Mental Health Analysis from Social Media
 
 import pandas as pd
 import numpy as np
@@ -74,7 +76,7 @@ sentiment_model_svm.fit(X_train_text, y_train_text)
 # Save SVM model
 joblib.dump(sentiment_model_svm, "models/sentiment_model_svm.pkl")
 
-print("✅ SVM Sentiment model trained successfully!")
+print("SVM Sentiment model trained successfully!")
 
 # Train BiLSTM Model
 max_sequence_length = 100
@@ -118,7 +120,7 @@ lstm_model.fit(X_train_lstm, y_train_lstm, epochs=10, validation_data=(X_test_ls
 # Save LSTM model
 lstm_model.save("models/bilstm_sentiment_model.h5")
 
-print("✅ BiLSTM Sentiment model trained successfully!")
+print("BiLSTM Sentiment model trained successfully!")
 
 # Encode behavioral dataset
 categorical_cols = ['Gender', 'Frequency of Social Media Interaction', 'Self-reported Mental Health Status']
