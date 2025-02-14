@@ -1,0 +1,1 @@
+To test the model or to run testModel.py we need another model named word2Vec_model.bin. So to get that once run trainModel.py
